@@ -1,0 +1,39 @@
+<!--<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"-->
+<!-- "http://java.sun.com/dtd/web-app_2_3.dtd" >-->
+
+<!--<web-app>-->
+<!--  <display-name>UrlShortener</display-name>-->
+
+<!--  &lt;!&ndash; Define the servlet &ndash;&gt;-->
+<!--  <servlet>-->
+<!--    <servlet-name>ShortenUrlServlet</servlet-name>-->
+<!--    <servlet-class>controller.ShortenUrlServlet</servlet-class> &lt;!&ndash; Update the package and class name &ndash;&gt;-->
+<!--</servlet>-->
+
+<!--  &lt;!&ndash; Map the servlet to a URL pattern -->
+<!--  <servlet-mapping>-->
+<!--    <servlet-name>ShortenUrlServlet</servlet-name>-->
+<!--    <url-pattern>/ShortenUrlServlet</url-pattern>-->
+<!--  </servlet-mapping>&ndash;&gt;-->
+<!--</web-app>-->
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+  <servlet>
+    <servlet-name>Jersey REST Service</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>javax.ws.rs.Application</param-name>
+      <param-value>controller.JAXRSConfig</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Jersey REST Service</servlet-name>
+    <url-pattern>/api/*</url-pattern>
+  </servlet-mapping>
+
+</web-app>

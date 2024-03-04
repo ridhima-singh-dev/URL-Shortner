@@ -1,0 +1,6 @@
+controller\JAXRSConfig.class
+controller\ShortenUrlServlet.class
+controller\UrlShortenerResource.class
+controller\UrlShortenerService.class
+controller\ExpandUrlServlet.class
+model\UrlMapping.class
