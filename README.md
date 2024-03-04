@@ -9,3 +9,6 @@ This project shows URL Shortener implementation using
 To launch the application, execute the following two commands:
 1. docker-compose build
 2. docker-compose up
+
+After performing above steps, the application will be accessible at the following URL: 
+http://localhost:8080/
